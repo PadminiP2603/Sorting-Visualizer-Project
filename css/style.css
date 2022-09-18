@@ -1,0 +1,126 @@
+/* :root {
+    --primary-color: beige;
+    --secondary-color:rgb(233, 233, 22);
+  } */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    user-select: none;
+  }
+  body {
+    position: relative;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .title {
+    background-color: beige;
+    text-align: center;
+    font-size: 1.2em;
+    padding-block: 0.5em;
+    color:black;
+    cursor: pointer;
+  }
+  
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8em;
+    font-size: 16px;
+    min-height: 70px;
+    padding-block: 0.6em;
+    background-color: rgb(222 216 143);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .navbar a {
+    all: unset;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+    background-color:#44c844;;
+  }
+  .navbar a:hover {
+    background-color: transparent;
+  }
+  .navbar #menu {
+    width: fit-content;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 8px;
+    background-color:#44c844;
+    color: white;
+  }
+  .navbar > .icon {
+    display: none;
+  }
+  #menu,
+  #random,
+  #start {
+    cursor: pointer;
+  }
+  
+  /* Center css */
+  .center {
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
+    height: 420px;
+    width: 410px;
+    max-height: 731px;
+  }
+  .array {
+    display: flex;
+    align-items: flex-start;
+    min-height: 100%;
+    height: 100%;
+    padding: 1rem;
+    flex-direction: row;
+  }
+  .cell {
+    display: flex;
+    align-items: flex-start;
+    flex: 0.5;
+    width: 0.000001%;
+    margin: 1px;
+    background-color: #d6d6d6;
+    resize: horizontal;
+    position: relative;
+    transition: all 0.4s ease-in;
+  }
+  .cell.done {
+    background-color: #9cec5b;
+    border-color: #9cec5b;
+    color: white;
+    transition: all 0.4s ease-out;
+  }
+  .cell.visited {
+    border-color: #6184d8;
+    background-color: #6184d8;
+    color: white;
+    transition: 0.5s;
+  }
+  .cell.current {
+    border-color: #50c5b7;
+    background-color: #50c5b7;
+    color: white;
+    transition: all 0.4s ease-out;
+  }
+  .cell.min {
+    background-color: #ff1493;
+    border-color: #ff1493;
+    color: white;
+    transition: all 0.4s ease-out;
+  }
+
